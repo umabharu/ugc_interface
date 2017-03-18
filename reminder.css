@@ -1,0 +1,107 @@
+# ugc_interface
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- GENERAL ---------- */
+
+body {
+	background: #282e3a;
+	color: #f9f9f9;
+	font: 100%/1.5em "Droid Sans", sans-serif;
+	margin: 0;
+}
+
+p { margin: 0; }
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* ---------- GENERAL-CLASSES ---------- */
+
+.container {
+	height: 248px;
+	left: 50%;
+	margin: -124px 0 0 -100px;
+	position: absolute;
+	top: 50%;
+	width: 200px;
+}
+
+/* ---------- APP ---------- */
+
+.app {
+	width: 200px;
+}
+
+.app-title {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 0 5px #15181f;
+}
+
+.reminder {
+	background: #474b59;
+	border-radius: 35px;
+	-webkit-box-shadow: 0 8px 0 #15181f;
+	box-shadow: 0 8px 0 #15181f;
+	height: 200px;
+	margin-bottom: 24px;
+	position: relative;
+	width: 200px;
+}
+
+.reminder ul {
+	height: 80px;
+	left: 50%;
+	margin: -40px 0 0 -76px;
+	position: absolute;
+	top: 50%;
+	width: 152px;
+}
+
+.reminder li {
+	height: 16px;
+	line-height: 16px;
+	margin-bottom: 16px;
+}
+.reminder li:last-child { margin-bottom: 0; }
+
+.reminder li:nth-child(1) .line { width: 120px; }
+.reminder li:nth-child(2) .line { width: 100px; }
+.reminder li:nth-child(3) .line { width: 110px; }
+
+.bullet {
+	background: #09b79c;
+	border-radius: 50%;
+	display: inline-block;
+	height: 16px;
+	margin-right: 16px;
+	width: 16px;
+}
+
+.line {
+	background: #f9f9f9;
+	border-radius: 3px;
+	display: inline-block;
+	height: 16px;
+}
+
+.notifications {
+	background: #d9383c;
+	border: 5px solid #f9f9f9;
+	border-radius: 50%;
+	height: 48px;
+	font-size: 32px;
+	font-weight: bold;
+	left: 90%;
+	line-height: 48px;
+	margin: -24px 0 0 -24px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 48px;
+}
