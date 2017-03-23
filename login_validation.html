@@ -1,0 +1,83 @@
+# ugc_interface
+<html>
+<head>
+   <title>Form Validation with Javascript</title> 
+   <link rel="stylesheet" type="text/css" href="login.css">
+   <h1>LOGIN</h1>
+</head>
+<body>
+    <div id="wrapper">
+    	<form method="POST" action="new_index.html" onsubmit="return validate()" name="vform">
+    	 <div>
+    	       <input type="text" name="Username" class="textInput" placeholder="Username">
+    	        <div id="name_error" class="val_error"></div>
+    	 </div>
+    	 <div>
+    	       <input type="email" name="Email" class="textInput" placeholder="Email">
+    	        <div id="email_error" class="val_error"></div>
+    	 </div>
+    	 <div>
+    	       <input type="password" name="Password" class="textInput" placeholder="Password">
+    	 </div>
+    	 <div>
+    	       <input type="password" name="Confirm password" class="textInput" placeholder="Password">
+    	        <div id="password_error" class="val_error"></div>
+    	 </div>
+    	 <div>
+    	       <input type="text" name="Phone Number" class="textInput" placeholder="Phonenumber">
+    	        <div id="name_error" class="val_error"></div>
+    	 </div>
+    	 <div>
+    	 	   <input type="submit" value="Register" class="button" name="register">
+    	 </div>
+    	</form>
+    </div>
+    <script type="text/javascript">
+    	var Username=document.forms["vform"]["Username"];
+    	var email=document.forms["vforms"]["email"]; 
+        var password=document.forms["vforms"]["password"];
+        var confirm_password=document.forms["vform"]["confirm_password"];
+        var name_error=document.getElementById("name_error");
+        var email_error=document.getElementById("email_error");
+        var password_error=document.getElementById("password_error");
+        username.addEventListener("blur",nameVerify,true);
+        email.addEventListener("blur",emailVerify,true);
+        password.addEventListener("blur",passwordVerify,true);
+
+        function validate()
+        {
+        	if(username.value=="")
+        	{
+        		username.style.border="1px solid red";
+        		name_error.textContent="Username is required";
+        		username.focus();
+        		return false;
+        	}
+        	if(email.value=="")
+        	{
+        		email.style.border="1px solid red";
+        		email_error.textContent="email is required";
+        		email.focus();
+        		return false;
+        	}
+        	if(password.value=="")
+        	{
+        		password.style.border="1px solid red";
+        		password_error.textContent="password is required";
+        	    password.focus();
+        		return false;
+        	}
+        }
+        function nameVerify()
+        {
+        	if(username.value!="")
+        	{
+        		username.style.border="1px solid red";
+        		username_error.innerHTML="";
+        	}
+        }
+
+
+    </script>
+</body>
+</html> 
